@@ -60,7 +60,7 @@ public abstract class BunkumHttpListener : IDisposable
 
     protected abstract Task<ListenerContext?> WaitForConnectionAsyncInternal(CancellationToken? globalCt = null);
 
-    internal static IEnumerable<(string, string)> ReadCookies(ReadOnlySpan<char> cookieHeader)
+    public static IEnumerable<(string, string)> ReadCookies(ReadOnlySpan<char> cookieHeader)
     {
         List<(string key, string value)> cookies = new(10);
 
@@ -107,7 +107,7 @@ public abstract class BunkumHttpListener : IDisposable
         return cookies;
     }
 
-    internal static IEnumerable<(string key, string value)> ReadHeaders(Stream stream)
+    public static IEnumerable<(string key, string value)> ReadHeaders(Stream stream)
     {
         List<(string key, string value)> headers = new(10);
         Span<byte> headerLineBytes = stackalloc byte[HeaderLineLimit];

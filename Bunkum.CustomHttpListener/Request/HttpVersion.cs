@@ -8,4 +8,5 @@ public enum HttpVersion
     Unknown,
     Http1_0,
     Http1_1,
+    Sip2_0
 }

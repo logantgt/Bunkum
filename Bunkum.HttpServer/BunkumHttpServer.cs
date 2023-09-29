@@ -294,8 +294,9 @@ public partial class BunkumHttpServer : IHotReloadable
 
                 await context.FlushResponseAndClose();
             }
-            catch
+            catch(Exception e)
             {
+                Console.WriteLine(e.ToString());
                 // ignored
             }
         }

@@ -12,6 +12,19 @@ public enum Method
     Trace,
     Patch,
     Connect,
+    Invite,
+    Ack,
+    Bye,
+    Cancel,
+    Register,
+    Prack,
+    Subscribe,
+    Notify,
+    Publish,
+    Info,
+    Refer,
+    Message,
+    Update
 }
 
 public static class MethodUtils
